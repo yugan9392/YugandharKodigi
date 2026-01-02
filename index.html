@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yugandhar Kodigi | Java Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#0a66c2;
+  --secondary:#00c6ff;
+  --dark:#0f172a;
+  --accent:#22c55e;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(120deg,#f0f4ff,#ffffff);
+  color:#333;
+}
+
+/* animation */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* header */
+header{
+  min-height:100vh;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  animation:fadeUp 1s ease;
+}
+
+.profile-pic{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  border:6px solid white;
+  object-fit:cover;
+  margin-bottom:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+header h1{font-size:48px}
+header p{font-size:20px;margin-top:10px}
+
+.btn{
+  margin-top:30px;
+  padding:14px 32px;
+  background:white;
+  color:var(--primary);
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:600;
+}
+.btn:hover{background:var(--accent);color:white}
+
+/* sections */
+section{
+  padding:70px 10%;
+  animation:fadeUp 1s ease;
+}
+
+h2{
+  color:var(--primary);
+  font-size:32px;
+  margin-bottom:25px;
+}
+
+/* about card */
+#about{
+  background:white;
+  margin:-80px 5% 40px;
+  padding:50px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+/* skills */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:25px;
+  text-align:center;
+}
+
+.skill{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.skill i{
+  font-size:40px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+.skill:hover{
+  transform:translateY(-8px);
+  background:linear-gradient(135deg,#e0ecff,#f5f9ff);
+}
+
+/* project */
+.project{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  margin-bottom:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+.project:hover{
+  border-left:6px solid var(--primary);
+  transform:translateY(-6px);
+}
+
+/* experience & education */
+.card{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* contact */
+#contact{
+  background:linear-gradient(135deg,var(--dark),#020617);
+  color:white;
+  margin:40px 5%;
+  border-radius:20px;
+}
+
+/* footer */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#64748b;
+}
+
+/* responsive */
+@media(max-width:768px){
+  header h1{font-size:36px}
+  .profile-pic{width:130px;height:130px}
+  section{padding:60px 7%}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <img src="profile.jpg" class="profile-pic" alt="Yugandhar Kodigi">
+  <h1>Yugandhar Kodigi</h1>
+  <p>Java Programmer | Full Stack Fresher</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a B.Tech Computer Science (CSD) graduate with hands-on experience as a
+    Full Stack Developer Intern at Rooman Technologies. I have strong knowledge
+    in Java, Spring Boot, SQL, and building scalable enterprise applications.
+  </p>
+</section>
+
+<!-- SKILLS WITH LOGOS -->
+<section>
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div class="skill"><i class="fa-brands fa-java"></i><p>Java</p></div>
+    <div class="skill"><i class="fa-solid fa-leaf"></i><p>Spring Boot</p></div>
+    <div class="skill"><i class="fa-solid fa-database"></i><p>SQL / MySQL</p></div>
+    <div class="skill"><i class="fa-solid fa-plug"></i><p>JDBC</p></div>
+    <div class="skill"><i class="fa-solid fa-cloud"></i><p>REST APIs</p></div>
+    <div class="skill"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
+    <div class="skill"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
+    <div class="skill"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+    <div class="skill"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Live Sports Scoreboard</h3>
+    <p>Real-time scoreboard using Java, Spring Boot & WebSocket with live updates.</p>
+    <strong>Tech:</strong> Java, Spring Boot, WebSocket, MySQL
+  </div>
+
+  <div class="project">
+    <h3>Library Management System</h3>
+    <p>Automated system for managing books, users, and borrowing operations.</p>
+    <strong>Tech:</strong> Java, SQL, HTML, CSS, JavaScript
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Full Stack Developer Intern – Rooman Technologies</h3>
+    <p>Feb 2025 – May 2025</p>
+    <ul>
+      <li>Developed backend services using Spring Boot</li>
+      <li>Designed RESTful APIs</li>
+      <li>Worked with SQL & JDBC</li>
+      <li>Built responsive UI</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    <h3>B.Tech – Computer Science & Engineering (CSD)</h3>
+    <p>Srinivasa Ramanujan Institute of Technology</p>
+    <p>2022 – 2025</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📧 yugandharkodigi123@gmail.com</p>
+  <p>📞 +91 9392778309</p>
+  <p>📍 Hyderabad</p>
+</section>
+
+<footer>
+  © 2026 Yugandhar Kodigi | Java Developer
+</footer>
+
+</body>
+</html>
